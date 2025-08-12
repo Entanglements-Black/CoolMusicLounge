@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoolMusicLounge - Your Vibe, Your Music</title>
+    
+    <!-- Custom Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* --- Animated Gradient --- */
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1e0033, #3d0066, #ff00cc, #7b1fa2);
+            background-size: 400% 400%;
+            animation: moveGradient 15s ease infinite;
+        }
+
+        .hero-bg {
+            background-color: #12002b;
+            background-image: 
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.25) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(339, 98%, 61%, 0.25) 0px, transparent 50%),
+                radial-gradient(at 75% 88%, hsla(190, 98%, 61%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 33% 89%, hsla(259, 98%, 61%, 0.25) 0px, transparent 50%);
+            /* --- New transition for the interactive background effect --- */
+            transition: background-position 0.3s ease-out;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 26, 179, 0.25);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="py-4 px-6 md:px-12 flex justify-between items-center absolute w-full z-10">
+        <h1 class="text-2xl font-bold tracking-wider">CoolMusicLounge</h1>
+        <a href="https://music.youtube.com/channel/UCXAz71FcJnaNbsubV1xh8lQ?si=plpk4n7bLFwGQNsh" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+            Create Your Playlist
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-bg pt-32 pb-20 md:pt-48 md:pb-32 text-center relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4">
+                Introducing CoolMusicLounge
+            </h2>
+            <p class="text-lg md:text-xl text-purple-200 max-w-3xl mx-auto mb-8">
+                Your ultimate destination for curated playlists and sonic discovery. Find the perfect vibe for any moment.
+            </p>
+            <a href="#contact" class="bg-pink-600 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg cta-button inline-block">
+                Get In Touch
+            </a>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-purple-300">Why You'll Love the Lounge</h3>
+                <p class="text-gray-400 mt-2">We're more than just music; we're a whole mood.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature Cards -->
+                <div class="feature-card bg-gray-900 p-8 rounded-xl shadow-lg border border-purple-800">
+                    <div class="text-pink-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 6l12 3" /></svg></div>
+                    <h4 class="text-xl font-bold mb-2">Expertly Curated</h4><p class="text-gray-400">Playlists crafted by music lovers, for music lovers. Every track is chosen with intention.</p>
+                </div>
+                <div class="feature-card bg-gray-900 p-8 rounded-xl shadow-lg border border-purple-800">
+                    <div class="text-teal-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div>
+                    <h4 class="text-xl font-bold mb-2">Discover New Artists</h4><p class="text-gray-400">Break free from the algorithm and find your next favorite artist, from underground gems to rising stars.</p>
+                </div>
+                <div class="feature-card bg-gray-900 p-8 rounded-xl shadow-lg border border-purple-800">
+                    <div class="text-yellow-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                    <h4 class="text-xl font-bold mb-2">Vibes for Any Mood</h4><p class="text-gray-400">From late-night chill sessions to high-energy workouts, we have the perfect soundtrack for your life.</p>
+                </div>
+                <div class="feature-card bg-gray-900 p-8 rounded-xl shadow-lg border border-purple-800">
+                    <div class="text-red-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg></div>
+                    <h4 class="text-xl font-bold mb-2">Join The Community</h4><p class="text-gray-400">Connect with others who share your passion. Music is better when it's shared.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="max-w-xl mx-auto bg-gray-900 bg-opacity-60 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl border border-purple-700">
+                <h3 class="text-3xl font-bold text-center mb-2">Reach Out To Us</h3>
+                <p class="text-center text-purple-200 mb-8">Questions, collaborations, or just want to say hi? Drop us a line.</p>
+                <form action="https://formspree.io/f/mqkrvgda" method="POST">
+                    <div class="mb-6">
+                        <label for="name" class="block text-purple-300 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-800 text-white border-2 border-purple-600 rounded-lg py-3 px-4 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-purple-300 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-gray-800 text-white border-2 border-purple-600 rounded-lg py-3 px-4 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-purple-300 font-semibold mb-2">Message Us</label>
+                        <textarea id="message" name="message" rows="5" class="w-full bg-gray-800 text-white border-2 border-purple-600 rounded-lg py-3 px-4 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="Tell us what's on your mind..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg cta-button">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monetization Section -->
+    <section id="support" class="bg-gray-800 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-purple-300 mb-4">Connect With Us</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+                CoolMusicLounge is a passion project. If you enjoy the vibes and want to help us keep the music playing, every little bit helps.
+            </p>
+            <a href="https://buy.stripe.com/test_5kQaEXcuL8zhgCB482cZa00" target="_blank" rel="noopener noreferrer" class="bg-teal-500 hover:bg-teal-400 text-white font-bold py-3 px-8 rounded-full text-lg cta-button inline-block shadow-lg">
+                Support the Project or Buy Us a Coffee
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-500">
+        <p>&copy; 2025 CoolMusicLounge. All Rights Reserved.</p>
+        <p class="text-sm mt-2">Designed with passion for music lovers.</p>
+    </footer>
+
+    <!-- JavaScript for Interactive Background -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hero = document.querySelector('.hero-bg');
+            if (hero) {
+                window.addEventListener('mousemove', (e) => {
+                    const { clientX, clientY } = e;
+                    const { innerWidth, innerHeight } = window;
+                    
+                    // Calculate the mouse position as a value from -1 to 1
+                    const xPos = (clientX / innerWidth - 0.5) * 2;
+                    const yPos = (clientY / innerHeight - 0.5) * 2;
+                    
+                    // Define the strength of the movement effect
+                    const xOffset = xPos * -10; // in pixels
+                    const yOffset = yPos * -10; // in pixels
+                    
+                    // Apply the effect by shifting the background position
+                    hero.style.backgroundPosition = `calc(50% + ${xOffset}px) calc(50% + ${yOffset}px)`;
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
